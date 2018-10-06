@@ -1,5 +1,7 @@
 # FINT coding guidelines
 
+# WORK IN PROGRESS
+
 These guidelines were created to ensure consistency within FINT source code.
 
 
@@ -60,9 +62,46 @@ Consistency is very important, use the same names for the same concept. This wil
 
 ### 1.3 Java language features
 
+*Streams*
+The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell.
+- Josh Bloch (Effective java)
+
+A simple example where streams will improve the code:
+
+We have a list of names that we want to uppercase. Using a for-loop it can be done like this:
+```
+List<String> uppercaseNames = new ArrayList<>();
+for (String name : names) {
+    uppercaseNames.add(name.toUpperCase());
+}
+```
+
+By using streams we can improve the code:
+```
+List<String> uppercaseNames = names.stream()
+  .map(name -> name.toUpperCase())
+  .collect(Collectors.toList());
+```
+
+(method references usually result in shorter, clearer code.)
+
+And we can further enhance the code in this example by using method references:
+```
+names.stream()
+  .map(String::toUpperCase)
+  .collect(Collectors.toList());
+```
+
+When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain.
+- Josh Bloch (Effective Java)
 
 
 ### 1.4 Comments
+
+Comments are, at best, a necessary evil.
+- Robert C. Martin (Clean Code)
+
+
 
 ## 2. Testing
 
