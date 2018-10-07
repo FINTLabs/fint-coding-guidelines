@@ -96,14 +96,22 @@ When used appropriately, streams can make programs shorter and clearer; when use
 - Josh Bloch (Effective Java)
 
 
-### 1.4 Comments
-
+### 1.4 Documentation / Comments
+ 
 Comments are, at best, a necessary evil.
 - Robert C. Martin (Clean Code)
 
+1. Prefer good names rather than having to add a comment.
+2. Avoid commenting out code. This can be fine if you are testing something, but do not commit the commented out code into the source code repository. If it is not needed any more, delete it.
+
+While the general guideline is to avoid the need for comments, there are situations where comments can be useful. Such as:
+1. Public APIs. If you are creating a library, add javadoc comments to the classes that will be used by other projects.
+2. Usage of a third party library. There can be situations where the use of a library is not self explanatory. If the code is getting complex due to code you have no control over, write a comment explaining why it is implemented this way.
 
 
 ## 2. Testing
+
+We also consider the tests to provide useful documentation for how the code works.
 
 ### 2.1 Test naming
 
