@@ -63,12 +63,12 @@ Consistency is very important, use the same names for the same concept. This wil
 ### 1.3 Java language features
 
 *Streams*
-The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell.
+The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell. 
 - Josh Bloch (Effective java)
 
 A simple example where streams will improve the code:
 
-We have a list of names that we want to uppercase. Using a for-loop it can be done like this:
+We have a list of names that we want to uppercase. Using a for-loop it can be done like this:xample
 ```
 List<String> uppercaseNames = new ArrayList<>();
 for (String name : names) {
@@ -83,7 +83,9 @@ List<String> uppercaseNames = names.stream()
   .collect(Collectors.toList());
 ```
 
-(method references usually result in shorter, clearer code.)
+*Method references*
+Method references usually result in shorter, clearer code.
+- Josh Bloch (Effective java)
 
 And we can further enhance the code in this example by using method references:
 ```
@@ -91,6 +93,28 @@ names.stream()
   .map(String::toUpperCase)
   .collect(Collectors.toList());
 ```
+
+While the use of streams and method references are recommended, there are places where they make the code less readable.
+
+Example taken from: https://dzone.com/articles/functional-programming-patterns-with-java-8
+```
+// DON'T DO THIS
+public List<Product> getFrequentOrderedProducts(List<Order> orders) {
+        return orders.stream()
+                        .filter(o -> o.getCreationDate().isAfter(LocalDate.now().minusYears(1)))
+                        .flatMap(o -> o.getOrderLines().stream())
+                        .collect(groupingBy(OrderLine::getProduct, summingInt(OrderLine::getItemCount)))
+                        .entrySet()
+                        .stream()
+                        .filter(e -> e.getValue() >= 10)
+                        .map(Entry::getKey)
+                        .filter(p -> !p.isDeleted())
+                        .filter(p -> !productRepo.getHiddenProductIds().contains(p.getId()))
+                        .collect(toList());
+}
+```
+
+This code is hard to read. Splitting it up into smaller methods will greatly help with the readability.
 
 When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain.
 - Josh Bloch (Effective Java)
@@ -102,9 +126,9 @@ Comments are, at best, a necessary evil.
 - Robert C. Martin (Clean Code)
 
 1. Prefer good names rather than having to add a comment.
-2. Avoid commenting out code. This can be fine if you are testing something, but do not commit the commented out code into the source code repository. If it is not needed any more, delete it.
+2. Avoid commenting out code. Do not commit the commented out code into the source code repository. If it is not needed any more, delete it.
 
-While the general guideline is to avoid the need for comments, there are situations where comments can be useful. Such as:
+While the general guideline is to avoid the use of comments, there are situations where comments can be useful:
 1. Public APIs. If you are creating a library, add javadoc comments to the classes that will be used by other projects.
 2. Usage of a third party library. There can be situations where the use of a library is not self explanatory. If the code is getting complex due to code you have no control over, write a comment explaining why it is implemented this way.
 
