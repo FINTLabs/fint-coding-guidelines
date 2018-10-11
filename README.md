@@ -33,11 +33,9 @@ It is difficult to set a number of lines that is too much for a class/method, bu
 
 ### 1.2 Naming
 
-_There are only two hard things in Computer Science: cache invalidation and naming things._
-- Phil Karlton (https://martinfowler.com/bliki/TwoHardThings.html)
+_There are only two hard things in Computer Science: cache invalidation and naming things._ **[[3]](#references)**
 
-_The name of a variable, function, or class, should answer all the big questions. It should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent._
-- Robert C. Martin (Clean code)
+_The name of a variable, function, or class, should answer all the big questions. It should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent._ **[[1]](#references)**
 
 Good naming and encapsulation:
 ```
@@ -56,8 +54,7 @@ public class EventState {
 
 This class has an internal variable called expires. This calculates when the event is expired. It does not expose it, but provides a method called `expired()` instead. This is an easily understandable name, when called it will let you know if the event has expired or not.
 
-_The length of a name should correspond to the size of its scope._
-- Robert C. Martin (Clean code)
+_The length of a name should correspond to the size of its scope._ **[[1]](#references)**
 
 If the scope of the name is small we can use a short name:
 ```
@@ -77,8 +74,7 @@ Consistency is very important, use the same names for the same concept. This wil
 ### 1.3 Java language features
 
 *Streams*
-The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell. 
-- Josh Bloch (Effective java)
+The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell. **[[2]](#references)**
 
 A simple example where streams will improve the code:
 
@@ -98,8 +94,7 @@ List<String> uppercaseNames = names.stream()
 ```
 
 *Method references*
-Method references usually result in shorter, clearer code.
-- Josh Bloch (Effective java)
+Method references usually result in shorter, clearer code. **[[2]](#references)**
 
 And we can further enhance the code in this example by using method references:
 ```
@@ -130,14 +125,12 @@ public List<Product> getFrequentOrderedProducts(List<Order> orders) {
 
 This code is hard to read. Splitting it up into smaller methods will greatly help with the readability.
 
-When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain.
-- Josh Bloch (Effective Java)
+When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain. **[[2]](#references)**
 
 
 ### 1.4 Comments
  
-_Comments are, at best, a necessary evil._
-- Robert C. Martin (Clean Code)
+_Comments are, at best, a necessary evil._ **[[1]](#references)**
 
 ```
 // Don't do this!!
@@ -171,3 +164,4 @@ We also consider the tests to provide useful documentation for how the code work
 
 1. [Robert C. Martin - Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 2. [Joshua Bloch - Effective Java (3rd Edition)](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)
+3. [Phil Karlton](https://martinfowler.com/bliki/TwoHardThings.html)
