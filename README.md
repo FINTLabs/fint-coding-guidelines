@@ -52,7 +52,7 @@ public class EventState {
 }
 ```
 
-This class has an internal variable called expires. This calculates when the event is expired. It does not expose it, but provides a method called `expired()` instead. This is an easily understandable name, when called it will let you know if the event has expired or not.
+This class has an internal variable called _expires_. This calculates when the event is expired. It does not expose it, but provides a method called `expired()` instead. This is an easily understandable name, when called it will let you know if the event has expired or not.
 
 _The length of a name should correspond to the size of its scope._ **[[1]](#references)**
 
@@ -105,7 +105,7 @@ names.stream()
 
 While the use of streams and method references are recommended, there are places where they make the code less readable.
 
-Example taken from: https://dzone.com/articles/functional-programming-patterns-with-java-8
+Example from [Functional Programming Patterns With Java 8](https://dzone.com/articles/functional-programming-patterns-with-java-8)
 ```
 // DON'T DO THIS
 public List<Product> getFrequentOrderedProducts(List<Order> orders) {
