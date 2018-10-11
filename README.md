@@ -9,7 +9,7 @@ These guidelines were created to ensure consistency within FINT source code.
 
 ### 1.1 Code style
 
-FINT uses the default (Java code style in IntelliJ IDEA)[https://www.jetbrains.com/help/idea/code-style-java.html].  
+FINT uses the default [Java code style in IntelliJ IDEA](https://www.jetbrains.com/help/idea/code-style-java.html).
 
 1. Always format the code before committing the code into the repository.  
 2. If code requires reformatting while you are working on another task, add the format changes to its own commit. This makes it easier to review the code. 
