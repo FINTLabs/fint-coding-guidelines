@@ -18,7 +18,7 @@ FINT uses the default (Java code style in IntelliJ IDEA)[https://www.jetbrains.c
 ### 1.1 Small methods/classes
 
 _The first rule of functions is that they should be small._
-_The second rule of functions is that they should be smaller than that._ [1](#References)
+_The second rule of functions is that they should be smaller than that._ **[1](#references)**
 
 A class should have a single responsibility. It should have a single reason to change.
 
