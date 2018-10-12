@@ -22,9 +22,9 @@ _The second rule of functions is that they should be smaller than that._ **[[1]]
 
 A class should have a single responsibility. It should have a single reason to change.
 
-Methods should do "one thing". Try to keep all logic in a method on the same level of abstraction.
+Methods should do _one thing_. Try to keep all logic in a method on the same level of abstraction.
 
-It is difficult to set a number of lines that is too much for a class/method, but we use these guidelines:
+**It is difficult to set a number of lines that is too much for a class/method, but we use these guidelines:**
 1. Is the method tens of lines long, perhaps it is working on multiple levels of abstraction? 
 2. Is the class hundreds of lines long, perhaps the class has more than one responsibilty?
 3. Is the class name very generic? The class is most likely dealing with multiple responsibilities.
@@ -38,7 +38,7 @@ _There are only two hard things in Computer Science: cache invalidation and nami
 _The name of a variable, function, or class, should answer all the big questions. It should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent._ **[[1]](#references)**
 
 Good naming and encapsulation:
-```
+```java
 public class EventState {
     private final long expires;
 
@@ -52,19 +52,20 @@ public class EventState {
 }
 ```
 
-This class has an internal variable called _expires_. This calculates when the event is expired. It does not expose it, but provides a method called `expired()` instead. This is an easily understandable name, when called it will let you know if the event has expired or not.
+The _EventState_ class has an internal variable called _expires_. It does not expose it, but provides a method called `expired()` instead. This calculates when the event is expired.
+It is easy to understand what the method returns and also it does encapsulates the internal state. It is not necessary for external components to know the details of how the `expired()` method works.
 
 _The length of a name should correspond to the size of its scope._ **[[1]](#references)**
 
 If the scope of the name is small we can use a short name:
-```
+```java
 for(int i = 0; i < 10; i++) {
   ...
 }
 ```
 
 If the scope is large we should use a longer name:
-```
+```java
 public static final String CACHE_INITIALDELAY_ARBEIDSFORHOLD = "${fint.consumer.cache.initialDelay.arbeidsforhold:60000}";
 ```
 
@@ -73,13 +74,11 @@ Consistency is very important, use the same names for the same concept. This wil
 
 ### 1.3 Java language features
 
-*Streams*
-The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell. **[[2]](#references)**
+**Streams**
+_The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell._ **[[2]](#references)**
 
-A simple example where streams will improve the code:
-
-We have a list of names that we want to uppercase. Using a for-loop it can be done like this:xample
-```
+Lets look at a simple example. We have a list of names that we want to uppercase. Using a for-loop it can be done like this:
+```java
 List<String> uppercaseNames = new ArrayList<>();
 for (String name : names) {
     uppercaseNames.add(name.toUpperCase());
@@ -87,7 +86,7 @@ for (String name : names) {
 ```
 
 By using streams we can improve the code:
-```
+```java
 List<String> uppercaseNames = names.stream()
   .map(name -> name.toUpperCase())
   .collect(Collectors.toList());
@@ -97,7 +96,7 @@ List<String> uppercaseNames = names.stream()
 Method references usually result in shorter, clearer code. **[[2]](#references)**
 
 And we can further enhance the code in this example by using method references:
-```
+```java
 names.stream()
   .map(String::toUpperCase)
   .collect(Collectors.toList());
@@ -105,8 +104,8 @@ names.stream()
 
 While the use of streams and method references are recommended, there are places where they make the code less readable.
 
-Example from [Functional Programming Patterns With Java 8](https://dzone.com/articles/functional-programming-patterns-with-java-8)
-```
+Example taken from [Functional Programming Patterns With Java 8](https://dzone.com/articles/functional-programming-patterns-with-java-8)
+```java
 // DON'T DO THIS
 public List<Product> getFrequentOrderedProducts(List<Order> orders) {
         return orders.stream()
@@ -132,7 +131,7 @@ When used appropriately, streams can make programs shorter and clearer; when use
  
 _Comments are, at best, a necessary evil._ **[[1]](#references)**
 
-```
+```java
 // Don't do this!!
 public enum Status {
     NOT_QUEUED, // this test is created, but not even queued
