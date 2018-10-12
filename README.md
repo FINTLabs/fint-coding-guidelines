@@ -4,8 +4,11 @@
 
 These guidelines were created to ensure consistency within FINT source code.
 
-* [General](#1-general)
-  * [Code Style](#11-code-style)
+* [General](#general)
+  * [Code Style](#code-style)
+  * [Small methods/classes](#small-methodsclasses)
+  * [Naming](#naming)
+  * [Java language features](#java-language-features)
 
 ## General
 
