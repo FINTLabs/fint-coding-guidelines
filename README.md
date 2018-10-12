@@ -4,6 +4,8 @@
 
 These guidelines were created to ensure consistency within FINT source code.
 
+* 1. [General](#1-general)
+** 1.1 [Code Style](#11-code-style)
 
 ## 1. General
 
@@ -103,8 +105,7 @@ names.stream()
 ```
 
 While the use of streams and method references are recommended, there are places where they make the code less readable.
-
-Example taken from [Functional Programming Patterns With Java 8](https://dzone.com/articles/functional-programming-patterns-with-java-8)
+An example of this is the code below, taken from [Functional Programming Patterns With Java 8](https://dzone.com/articles/functional-programming-patterns-with-java-8)
 ```java
 // DON'T DO THIS
 public List<Product> getFrequentOrderedProducts(List<Order> orders) {
@@ -144,14 +145,15 @@ This code represents a statuses. These comments are not needed. They do not prov
 1. Prefer good names rather than having to add a comment.
 2. Avoid commenting out code. Do not commit the commented out code into the source code repository. If it is not needed any more, delete it.
 
-While the general guideline is to avoid the use of comments, there are situations where comments can be useful:
+**While the general guideline is to avoid the use of comments, there are situations where comments can be useful:**
 1. Public APIs. If you are creating a library, add javadoc comments to the classes that will be used by other projects.
-2. Usage of a third party library. There can be situations where the use of a library is not self explanatory. If the code is getting complex due to code you have no control over, write a comment explaining why it is implemented this way.
+2. Usage of a third party library. There can be situations where the use of a library is not self explanatory. If the your source code is becoming complex due to an external dependency, write a comment explaining why it is implemented this way.
 
 
 ## 2. Testing
 
-We also consider the tests to provide useful documentation for how the code works.
+
+We consider the tests to provide useful documentation for how the code works.
 
 ### 2.1 Test naming
 
