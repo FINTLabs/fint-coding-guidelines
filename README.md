@@ -4,12 +4,12 @@
 
 These guidelines were created to ensure consistency within FINT source code.
 
-1. [General](#1-general)  
-1.1 [Code Style](#11-code-style)
+* [General](#1-general)  
+** [Code Style](#11-code-style)
 
-## 1. General
+## General
 
-### 1.1 Code style
+### Code style
 
 FINT uses the default [Java code style in IntelliJ IDEA](https://www.jetbrains.com/help/idea/code-style-java.html).
 
@@ -17,7 +17,7 @@ FINT uses the default [Java code style in IntelliJ IDEA](https://www.jetbrains.c
 2. If code requires reformatting while you are working on another task, add the format changes to its own commit. This makes it easier to review the code. 
 
 
-### 1.1 Small methods/classes
+### Small methods/classes
 
 _The first rule of functions is that they should be small._
 _The second rule of functions is that they should be smaller than that._ **[[1]](#references)**
@@ -33,7 +33,7 @@ Methods should do _one thing_. Try to keep all logic in a method on the same lev
 4. **Do you have a hard time finding a good name for a class? It could be  separate concepts within the same class and that it should be split into two classes.**
 
 
-### 1.2 Naming
+### Naming
 
 _There are only two hard things in Computer Science: cache invalidation and naming things._ **[[3]](#references)**
 
@@ -74,7 +74,7 @@ public static final String CACHE_INITIALDELAY_ARBEIDSFORHOLD = "${fint.consumer.
 Consistency is very important, use the same names for the same concept. This will make it easier to read and understand the code.
 
 
-### 1.3 Java language features
+### Java language features
 
 **Streams**
 _The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell._ **[[2]](#references)**
@@ -128,7 +128,7 @@ This code is hard to read. Splitting it up into smaller methods will greatly hel
 When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain. **[[2]](#references)**
 
 
-### 1.4 Comments
+### Comments
  
 _Comments are, at best, a necessary evil._ **[[1]](#references)**
 
@@ -150,16 +150,16 @@ This code represents a statuses. These comments are not needed. They do not prov
 2. Usage of a third party library. There can be situations where the use of a library is not self explanatory. If the your source code is becoming complex due to an external dependency, write a comment explaining why it is implemented this way.
 
 
-## 2. Testing
+## Testing
 
 
 We consider the tests to provide useful documentation for how the code works.
 
-### 2.1 Test naming
+### Test naming
 
-### 2.2 Asserts
+### Asserts
 
-### 2.3 Mocking
+### Mocking
 
 # References
 
