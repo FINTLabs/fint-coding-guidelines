@@ -1,11 +1,8 @@
 # FINT coding guidelines
 
-# WORK IN PROGRESS
-
 These guidelines were created to ensure consistency within FINT source code.
 
 - [FINT coding guidelines](#fint-coding-guidelines)
-- [WORK IN PROGRESS](#work-in-progress)
   - [General](#general)
     - [Code style](#code-style)
     - [Small methods/classes](#small-methodsclasses)
@@ -16,7 +13,7 @@ These guidelines were created to ensure consistency within FINT source code.
     - [Test naming](#test-naming)
     - [Asserts](#asserts)
     - [Mocking](#mocking)
-- [References](#references)
+  - [References](#references)
 
 ## General
 
@@ -172,7 +169,7 @@ We consider the tests to provide useful documentation for how the code works.
 
 ### Mocking
 
-# References
+## References
 
 1. [Robert C. Martin - Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 2. [Joshua Bloch - Effective Java (3rd Edition)](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)
