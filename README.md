@@ -2,6 +2,8 @@
 
 These guidelines were created to ensure consistency within FINT source code.
 
+---
+
 - [FINT coding guidelines](#fint-coding-guidelines)
   - [General](#general)
     - [Code style](#code-style)
