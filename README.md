@@ -162,10 +162,43 @@ This code represents a statuses. These comments are not needed. They do not prov
 
 ## Testing
 
-
 We consider the tests to provide useful documentation for how the code works.
 
 ### Test naming
+
+Name the unit test containing these parts (**[[4]](#references)**:
+```
+1)Unit of work - 2)state under test - 3)expected behavior
+```
+
+1. What is the feature we are testing? (often this is the method name)
+2. State under test, what is the input to the test?
+3. What is the expected outcome`
+
+If we take a simple example, we want to write tests for this method:
+```java
+public class StringCalculator {
+    public int add(String numbers) {
+      ...
+    }
+}
+```
+
+The scenario we want to test is when two numbers are sent in, we should get the sum of the numbers in return.
+```groovy
+def "Add given two numbers returns sum"() {
+  ...
+}
+```
+
+**Expecting exceptions**
+Lets say that for negative numbers we expect the code to throw an `IllegalArgumentException`.
+We can name the test like this:
+```groovy
+def "Add given negative number throws IllegalArgumentException"() {
+  ...
+}
+```
 
 ### Asserts
 
@@ -176,3 +209,4 @@ We consider the tests to provide useful documentation for how the code works.
 1. [Robert C. Martin - Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882)
 2. [Joshua Bloch - Effective Java (3rd Edition)](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)
 3. [Phil Karlton](https://martinfowler.com/bliki/TwoHardThings.html)
+4. [Roy Osherove - Naming standards for unit tests](http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html)
