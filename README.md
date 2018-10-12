@@ -4,8 +4,8 @@
 
 These guidelines were created to ensure consistency within FINT source code.
 
-* 1. [General](#1-general)
-** 1.1 [Code Style](#11-code-style)
+1. [General](#1-general)
+1.1 [Code Style](#11-code-style)
 
 ## 1. General
 
