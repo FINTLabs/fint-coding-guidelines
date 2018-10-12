@@ -143,7 +143,7 @@ When used appropriately, streams can make programs shorter and clearer; when use
 _Comments are, at best, a necessary evil._ **[[1]](#references)**
 
 ```java
-// Don't do this!!
+// DON'T DO THIS
 public enum Status {
     NOT_QUEUED, // this test is created, but not even queued
     RUNNING, // this test is still running
