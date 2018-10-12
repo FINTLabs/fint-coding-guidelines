@@ -167,13 +167,9 @@ We consider the tests to provide useful documentation for how the code works.
 ### Test naming
 
 Name the unit test containing these parts (**[[4]](#references)**:
-```
-1)Unit of work - 2)state under test - 3)expected behavior
-```
-
-1. What is the feature we are testing? (often this is the method name)
-2. State under test, what is the input to the test?
-3. What is the expected outcome`
+1. **Unit of work**. What is the feature we are testing? (often this is the method name)
+2. **State under test**. What is the input to the test?
+3. **Expected behavior**. What is the expected outcome`
 
 If we take a simple example, we want to write tests for this method:
 ```java
