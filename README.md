@@ -166,12 +166,12 @@ We consider the tests to provide useful documentation for how the code works.
 
 ### Test naming
 
-Name the unit test containing these parts (**[[4]](#references)**:
+Name the unit test containing these parts **[[4]](#references)**:
 1. **Unit of work**. What is the feature we are testing? (often this is the method name)
 2. **State under test**. What is the input to the test?
 3. **Expected behavior**. What is the expected outcome`
 
-If we take a simple example, we want to write tests for this method:
+If we take a simple example, we are going to write tests for this method:
 ```java
 public class StringCalculator {
     public int add(String numbers) {
@@ -180,14 +180,13 @@ public class StringCalculator {
 }
 ```
 
-The scenario we want to test is when two numbers are sent in, we should get the sum of the numbers in return.
+The first scenario we want to test is when two numbers are sent in. In this case we should get the sum of the numbers in return.
 ```groovy
 def "Add given two numbers returns sum"() {
   ...
 }
 ```
 
-**Expecting exceptions**
 Lets say that for negative numbers we expect the code to throw an `IllegalArgumentException`.
 We can name the test like this:
 ```groovy
