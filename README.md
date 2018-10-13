@@ -35,18 +35,18 @@ A class should have a single responsibility. It should have a single reason to c
 
 Methods should do _one thing_. Try to keep all logic in a method on the same level of abstraction.
 
-**It is difficult to set a number of lines that is too much for a class/method, but we use these guidelines:**
+**It is difficult to set a number of lines that is too much for a class/method, but we use these general guidelines:**
 1. Is the method tens of lines long, perhaps it is working on multiple levels of abstraction? 
 2. Is the class hundreds of lines long, perhaps the class has more than one responsibilty?
-3. Is the class name very generic? The class is most likely dealing with multiple responsibilities.
-4. **Do you have a hard time finding a good name for a class? It could be  separate concepts within the same class and that it should be split into two classes.**
+3. Is the class name generic? The class is most likely dealing with multiple responsibilities.
+4. **Do you have a hard time finding a good name for a class? It could because you have separate concepts within the same class and that it should be split into two classes.**
 
 
 ### Naming
 
 _There are only two hard things in Computer Science: cache invalidation and naming things._ **[[3]](#references)**
 
-_The name of a variable, function, or class, should answer all the big questions. It should tell you why it exists, what it does, and how it is used. If a name requires a comment, then the name does not reveal its intent._ **[[1]](#references)**
+_The name of a variable, function, or class, should answer all the big questions. It should tell you why it **exists, what it does, and how it is used**. If a name requires a comment, then the name does not reveal its intent._ **[[1]](#references)**
 
 Good naming and encapsulation:
 ```java
@@ -63,8 +63,8 @@ public class EventState {
 }
 ```
 
-The _EventState_ class has an internal variable called _expires_. It does not expose it, but provides a method called `expired()` instead. This calculates when the event is expired.
-It is easy to understand what the method returns and also it does encapsulates the internal state. It is not necessary for external components to know the details of how the `expired()` method works.
+The _EventState_ class has an internal variable called _expires_. It does not expose it, but provides a method called `expired()`. This calculates when the event is expired.  
+It is easy to understand this method does and encapsulates the internal state. It is not necessary for external components to know the details of how the `expired()` method works.
 
 _The length of a name should correspond to the size of its scope._ **[[1]](#references)**
 
