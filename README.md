@@ -167,7 +167,7 @@ This code represents a statuses. These comments are not needed. They do not prov
 * Do not rely on test order.
 * Keep the tests simple, avoid the use of frameworks if possible (_do not use the Spring container in the test if it is not necessary_).
 * Consistency, the tests should pass or fail in a consistent manner. If you have a test that is unstable, delete it/rewrite it.
-* * Always run all tests before committing changes into the repository.
+* Always run all tests before committing changes into the repository.
 
 ### Test naming
 
