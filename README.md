@@ -14,7 +14,6 @@ These guidelines were created to ensure consistency within FINT source code.
   - [Testing](#testing)
     - [Test naming](#test-naming)
     - [Asserts](#asserts)
-    - [Mocking](#mocking)
   - [References](#references)
 
 ## General
@@ -162,7 +161,12 @@ This code represents a statuses. These comments are not needed. They do not prov
 
 ## Testing
 
-We consider the tests to provide useful documentation for how the code works.
+* Keep the unit tests fast (usually this means milliseconds).
+* Each test should clean up after itself.
+* Do not rely on test order.
+* Keep them simple, avoid the use of frameworks if possible (do not use the Spring container in the test if it is not necessary).
+* Always run all tests before committing changes into the repository.
+* The tests should be consistent. Meaning, they should pass or fail in a consistent manner. If you have a test that is unstable, that will fail sometimes, delete it/rewrite it.
 
 ### Test naming
 
@@ -197,7 +201,9 @@ def "Add given negative number throws IllegalArgumentException"() {
 
 ### Asserts
 
-### Mocking
+A unit test should focus on testing one concept. A simple way to validate this is in the assert statements. If the unit test has multiple asserts on different values it is an indication that it is not testing one concept.
+
+Therefore, keep the number of asserts to a minimum. This will help you test one concept at a time.
 
 ## References
 
