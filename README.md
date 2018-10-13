@@ -174,7 +174,7 @@ This code represents a statuses. These comments are not needed. They do not prov
 Name the unit test containing these parts **[[4]](#references)**:
 1. **Unit of work**. What is the feature we are testing? (this is usually the method name)
 2. **State under test**. What is the input to the test?
-3. **Expected behavior**. What is the expected outcome`
+3. **Expected behavior**. What is the expected outcome?
 
 If we take a simple example, we are going to write tests for this method:
 ```java
