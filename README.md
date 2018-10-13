@@ -165,9 +165,9 @@ This code represents a statuses. These comments are not needed. They do not prov
 * Each test should clean up after itself.
 * Each test must be isolated, do not rely on the result of another test.
 * Do not rely on test order.
-* Keep them simple, avoid the use of frameworks if possible (do not use the Spring container in the test if it is not necessary).
+* Keep the tests simple, avoid the use of frameworks if possible (do not use the Spring container in the test if it is not necessary).
 * Always run all tests before committing changes into the repository.
-* The tests should be consistent. Meaning, they should pass or fail in a consistent manner. If you have a test that is unstable, that will fail sometimes, delete it/rewrite it.
+* Consistency, the tests should pass or fail in a consistent manner. If you have a test that is unstable, delete it/rewrite it.
 
 ### Test naming
 
