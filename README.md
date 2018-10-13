@@ -85,7 +85,7 @@ Consistency is very important, use the same names for the same concept. This wil
 
 ### Java language features
 
-**Streams**
+**Streams**  
 _The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell._ **[[2]](#references)**
 
 Lets look at a simple example. We have a list of names that we want to uppercase. Using a for-loop it can be done like this:
@@ -103,10 +103,10 @@ List<String> uppercaseNames = names.stream()
   .collect(Collectors.toList());
 ```
 
-*Method references*
+**Method references**  
 Method references usually result in shorter, clearer code. **[[2]](#references)**
 
-And we can further enhance the code in this example by using method references:
+And we can further enhance the code in the example by using method references:
 ```java
 names.stream()
   .map(String::toUpperCase)
@@ -132,7 +132,7 @@ public List<Product> getFrequentOrderedProducts(List<Order> orders) {
 }
 ```
 
-This code is hard to read. Splitting it up into smaller methods will greatly help with the readability.
+This code is hard to read. Splitting it up into smaller methods will greatly help with the readability. Avoid using multiple `stream()` in the same statement. Split it up into smaller parts instead.
 
 When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain. **[[2]](#references)**
 
