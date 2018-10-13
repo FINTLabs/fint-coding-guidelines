@@ -10,6 +10,8 @@ These guidelines were created to ensure consistency within FINT source code.
     - [Small methods/classes](#small-methodsclasses)
     - [Naming](#naming)
     - [Java language features](#java-language-features)
+      - [Streams](#streams)
+      - [Method references](#method-references)
     - [Comments](#comments)
   - [Testing](#testing)
     - [Test naming](#test-naming)
@@ -85,7 +87,7 @@ Consistency is very important, use the same names for the same concept. This wil
 
 ### Java language features
 
-**Streams**  
+#### Streams  
 _The streams API was added in Java 8 to ease the task of performing bulk operations, sequentially or in parallell._ **[[2]](#references)**
 
 Lets look at a simple example. We have a list of names that we want to uppercase. Using a for-loop it can be done like this:
@@ -103,7 +105,7 @@ List<String> uppercaseNames = names.stream()
   .collect(Collectors.toList());
 ```
 
-**Method references**  
+#### Method references  
 Method references usually result in shorter, clearer code. **[[2]](#references)**
 
 And we can further enhance the code in the example by using method references:
@@ -161,7 +163,7 @@ This code represents a statuses. These comments are not needed. They do not prov
 
 ## Testing
 
-* Keep the unit tests fast (usually this means milliseconds).
+* Keep the unit tests fast (usually means milliseconds).
 * Each test should clean up after itself.
 * Each test must be isolated, do not rely on the result of another test.
 * Do not rely on test order.
