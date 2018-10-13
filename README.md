@@ -163,6 +163,7 @@ This code represents a statuses. These comments are not needed. They do not prov
 
 * Keep the unit tests fast (usually this means milliseconds).
 * Each test should clean up after itself.
+* Each test must be isolated, do not rely on the result of another test.
 * Do not rely on test order.
 * Keep them simple, avoid the use of frameworks if possible (do not use the Spring container in the test if it is not necessary).
 * Always run all tests before committing changes into the repository.
