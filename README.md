@@ -41,7 +41,7 @@ Methods should do _one thing_. Try to keep all logic in a method on the same lev
 1. Is the method tens of lines long, perhaps it is working on multiple levels of abstraction? 
 2. Is the class hundreds of lines long, perhaps the class has more than one responsibilty?
 3. Is the class name generic? The class is most likely dealing with multiple responsibilities.
-4. **Do you have a hard time finding a good name for a class? It could because you have separate concepts within the same class and that it should be split into two classes.**
+4. **Do you have a hard time finding a good name for a class? It could be because you have separate concepts within the same class and that it should be split into two classes.**
 
 
 ### Naming
@@ -108,7 +108,7 @@ List<String> uppercaseNames = names.stream()
 #### Method references  
 Method references usually result in shorter, clearer code. **[[2]](#references)**
 
-And we can further enhance the code in the example by using method references:
+And we can further enhance the code in the example above by using method references:
 ```java
 names.stream()
   .map(String::toUpperCase)
@@ -136,7 +136,7 @@ public List<Product> getFrequentOrderedProducts(List<Order> orders) {
 
 This code is hard to read. Splitting it up into smaller methods will greatly help with the readability. Avoid using multiple `stream()` in the same statement. Split it up into smaller parts instead.
 
-When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain. **[[2]](#references)**
+_When used appropriately, streams can make programs shorter and clearer; when used inappropriately, they can make programs difficult to read and maintain._ **[[2]](#references)**
 
 
 ### Comments
@@ -169,6 +169,7 @@ This code represents a statuses. These comments are not needed. They do not prov
 * Do not rely on test order.
 * Keep the tests simple, avoid the use of frameworks if possible (_do not use the Spring container in the test if it is not necessary_).
 * Consistency, the tests should pass or fail in a consistent manner. If you have a test that is unstable, delete it/rewrite it.
+* Prefer to test private methods through the public API.
 * Always run all tests before committing changes into the repository.
 
 ### Test naming
