@@ -64,7 +64,7 @@ public class EventState {
 ```
 
 The _EventState_ class has an internal variable called _expires_. It does not expose it, but provides a method called `expired()`. This calculates when the event is expired.  
-It is easy to understand what this method does and an important concept here is the encapsulation of the internal state. It is not necessary for external components to know the details of how the `expired()` method works.
+It is easy to understand what this method provides and an important concept here is the encapsulation of the internal state. It is not necessary for external components to know the details of how the `expired()` method works.
 
 _The length of a name should correspond to the size of its scope._ **[[1]](#references)**
 
