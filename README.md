@@ -28,7 +28,7 @@ FINT uses the default [Java code style in IntelliJ IDEA](https://www.jetbrains.c
 
 ### Small methods/classes
 
-_The first rule of functions is that they should be small._
+_The first rule of functions is that they should be small._  
 _The second rule of functions is that they should be smaller than that._ **[[1]](#references)**
 
 A class should have a single responsibility. It should have a single reason to change.
@@ -165,14 +165,14 @@ This code represents a statuses. These comments are not needed. They do not prov
 * Each test should clean up after itself.
 * Each test must be isolated, do not rely on the result of another test.
 * Do not rely on test order.
-* Keep the tests simple, avoid the use of frameworks if possible (do not use the Spring container in the test if it is not necessary).
-* Always run all tests before committing changes into the repository.
+* Keep the tests simple, avoid the use of frameworks if possible (_do not use the Spring container in the test if it is not necessary_).
 * Consistency, the tests should pass or fail in a consistent manner. If you have a test that is unstable, delete it/rewrite it.
+* * Always run all tests before committing changes into the repository.
 
 ### Test naming
 
 Name the unit test containing these parts **[[4]](#references)**:
-1. **Unit of work**. What is the feature we are testing? (often this is the method name)
+1. **Unit of work**. What is the feature we are testing? (this is usually the method name)
 2. **State under test**. What is the input to the test?
 3. **Expected behavior**. What is the expected outcome`
 
