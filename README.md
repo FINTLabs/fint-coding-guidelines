@@ -155,8 +155,8 @@ This code represents a statuses. These comments are not needed. They do not prov
 2. Avoid commenting out code. Do not commit the commented out code into the source code repository. If it is not needed any more, delete it.
 
 **While the general guideline is to avoid the use of comments, there are situations where comments can be useful:**
-1. Public APIs. If you are creating a library, add javadoc comments to the classes that will be used by other projects.
-2. Usage of a third party library. There can be situations where the use of a library is not self explanatory. If the your source code is becoming complex due to an external dependency, write a comment explaining why it is implemented this way.
+1. **Public APIs**. If you are creating a library, add javadoc comments to the classes that will be used by other projects.
+2. **Usage of third party libraries**. There can be situations where the use of a library is not self explanatory. If the your source code is becoming complex due to an external dependency, write a comment explaining why it is implemented this way.
 
 
 ## Testing
