@@ -1,7 +1,7 @@
 # FINT guidelines
 
 ## Development
-- [12 factor](https://12factor.net/)
+:ballot_box_with_check: [12 factor](https://12factor.net/)
 - [Coding guidelines](coding-guidelines.md)
 - Technology stack
 ## Deployment
