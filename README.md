@@ -3,7 +3,7 @@
 ## :computer: Development
 - [12 factor](https://12factor.net/)
 - [Coding guidelines](coding-guidelines.md)
-- Technology stack
+- [Technology stack](technology-stack.md)
 ## :open_file_folder: Deployment
 - CI/CD
 - Github versioning
