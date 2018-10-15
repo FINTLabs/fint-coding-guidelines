@@ -1,13 +1,13 @@
 # FINT guidelines
 
-## Development :computer:
+## :computer: Development
 - [12 factor](https://12factor.net/)
 - [Coding guidelines](coding-guidelines.md)
 - Technology stack
-## Deployment :open_file_folder:
+## :open_file_folder: Deployment
 - CI/CD
 - Github versioning
-## Runtime :runner:
+## :runner: Runtime
 - Docker / containers / paas, what are the constraints/possibilities
 - Monitoring
 - Logging
